@@ -1,3 +1,7 @@
+<?php 
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -16,15 +20,38 @@
 <body>
 
 
+
+
+
     <div class="container">
 
-      <form class="form-signin">
-        <h2 class="form-signin-heading">Seja bem vindo!</h2>
-        <a href="login.php" class="btn btn-lg btn-primary btn-block btn-login">Fazer Login</a>        
+      <form class="form-signin-login2" method="POST" action="config/valida.php">
+        <h2 class="form-signin-heading login-top">Login</h2>
+        <div class="login-cont">
         
+        <input type="text" class="login-sep" name="usuario" id="" class="form-control" placeholder="Login" required autofocus>
+        
+        <input type="password" class="login-sep" name="senha" id="" class="form-control" placeholder="Senha" required>
+        
+        <button class="btn btn-lg btn-primary btn-block btn-login2">Entrar</button>  
+        </div>
+
+        <p class="text-center text-danger error">
+          <?php if(isset($_SESSION['loginErro'])){
+            echo $_SESSION['loginErro'];
+            unset($_SESSION['loginErro']);
+          }?>
+      </p>
+
       </form>
 
+      
+
     </div>
+
+
+
+
 
 
 <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script> 

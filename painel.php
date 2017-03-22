@@ -1,3 +1,7 @@
+<?php 
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -16,15 +20,12 @@
 <body>
 
 
-    <div class="container">
 
-      <form class="form-signin">
-        <h2 class="form-signin-heading">Seja bem vindo!</h2>
-        <a href="login.php" class="btn btn-lg btn-primary btn-block btn-login">Fazer Login</a>        
-        
-      </form>
 
-    </div>
+  <h1>cliente</h1>
+
+
+
 
 
 <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script> 
